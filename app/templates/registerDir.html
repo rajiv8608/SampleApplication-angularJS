@@ -1,0 +1,94 @@
+<div ng-controller='registerController'>
+
+		<div class="container">
+			<div class="row main">
+				<div class="main-login main-center">
+				<h5>Sign up once and watch any of our free demos.</h5>
+					<form name="myForm">
+						
+						<div class="form-group">
+							<label for="name" class="cols-sm-2 control-label">Your Name</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                   
+									<input type="text" class="form-control" name="name" id="name" ng-model="user.name" placeholder="Enter your Name" ng-maxlength="10" ng-minlength="4" required/>
+                                   <div ng-show="form.$submitted || form.uName.$touched">
+                                        <div ng-show="form.uName.$error.required">Tell us your name.</div>
+                                    </div>
+                                </div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="email" class="cols-sm-2 control-label">Your Email</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" name="Email" id="email" ng-model="user.Email"  placeholder="Enter your Email"/>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="username" class="cols-sm-2 control-label">Username</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" name="username" id="username" ng-model="user.username" placeholder="Enter your Username"/>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="password" class="cols-sm-2 control-label">Password</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+									<input type="password" class="form-control" name="password" id="password" ng-model="user.Password" placeholder="Enter your Password"/>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="confirm" class="cols-sm-2 control-label">Confirm Password</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+									<input type="password" class="form-control" name="confirm" id="confirm" ng-model="user.confirm" placeholder="Confirm your Password"/>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group ">
+                            <button id="button" class="btn btn-primary btn-lg btn-block login-button" ng-click="register.registerUser(user)">Register</button>
+						</div>
+						
+					</form>
+				</div>
+			</div>
+              <button ng-click="register.getAllCountries()" > get countries</button>
+               <button ng-click="register.getCheckboxData()" > click me</button>
+                   <input type="checkbox" name="checkbox" ng-model="register.checking"  ng-click="register.selectAll(register.checking)" /> 
+
+     <div ng-repeat="check in register.allchecks  track by $index;">
+    
+    <input type="checkbox" name="checkbox" ng-model="check.isChecked" ng-click="register.Checked(check)" /> {{check.name}}
+     
+    </div>
+            
+            <select data-ng-model="country"  data-ng-change="updateCountry()">
+            
+                <option ng-repeat="countries in allCoutries" value="{{countries.code}}">{{countries.name}}</option>
+            </select>
+             <select data-ng-model="state" data-ng-options="state.name for state in availableStates">
+                <option value="">Select state</option>
+                </select>
+            
+            <input type="text" ng-model="name" />
+             <button ng-click="register.handleClick(name)"> broadcast</button>
+            
+		</div>
+	
+    
+</div>

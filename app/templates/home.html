@@ -1,0 +1,23 @@
+<div>
+    <div class="row">
+        <div class="col-md-4">
+            <label>Search Item</label><input type="text" ng-model="searchItem" placeholder="Enter to search item"/>
+        </div>
+    </div>
+    <div class="row">
+    <div class="col-sm-4 col-md-4" ng-repeat="awesomeThing in home.awesomeThings | filter:searchItem">
+      <div class="thumbnail">
+        <img class="pull-right" ng-src="images/{{ awesomeThing.logo }}" alt="{{ awesomeThing.title }}">
+        <div class="caption">
+          <h3>{{ awesomeThing.title }}</h3>
+          <p>{{ awesomeThing.description }}</p>
+          <p><a ng-href="{{awesomeThing.url}}">{{ awesomeThing.url }}</a></p>
+        </div>
+      </div>
+    </div>
+    </div>
+       
+  </div>
+
+    
+  

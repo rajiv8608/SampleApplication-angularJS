@@ -1,0 +1,30 @@
+ [{
+	"name": "home",
+    "url": "/home",
+	"state": "home",
+	"templateUrl": "app/templates/home.html",
+	"controller": "homeController",
+	"controllerAs": "home"
+}, {
+	"name": "register",
+	"url": "/register",
+	"state": "register",
+	"templateUrl": "app/templates/register.html",
+	"controller": "registerController",
+	"controllerAs": "register"
+}, {
+	"name": "login",
+	"url": "/login",
+	"state": "login",
+	"templateUrl": "app/templates/login.html",
+	"controller": "loginController",
+	"controllerAs": "login"
+},{
+	"name": "products",
+	"url": "/products",
+	"state": "products",
+	"templateUrl": "app/templates/products.html",
+	"controller": "productController",
+	"controllerAs": "products"
+}
+ ]
