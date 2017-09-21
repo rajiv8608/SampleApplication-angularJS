@@ -1,0 +1,12 @@
+.input-group .form-control {
+    position: relative;
+    z-index: 2;
+    float: left;
+    width: 30%;
+    margin-bottom: 0;
+}
+
+.btn-block {
+    display: block;
+    width: 30%;
+}
