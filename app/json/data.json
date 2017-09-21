@@ -4,27 +4,31 @@
 	"state": "home",
 	"templateUrl": "app/templates/home.html",
 	"controller": "homeController",
-	"controllerAs": "home"
+	"controllerAs": "home",
+    "icon": "glyphicon glyphicon-chevron-home"
 }, {
 	"name": "register",
 	"url": "/register",
 	"state": "register",
 	"templateUrl": "app/templates/register.html",
 	"controller": "registerController",
-	"controllerAs": "register"
+	"controllerAs": "register",
+    "icon": "glyphicon glyphicon-chevron-user"
 }, {
 	"name": "login",
 	"url": "/login",
 	"state": "login",
 	"templateUrl": "app/templates/login.html",
 	"controller": "loginController",
-	"controllerAs": "login"
+	"controllerAs": "login",
+    "icon": "glyphicon glyphicon-chevron-lock"
 },{
 	"name": "products",
 	"url": "/products",
 	"state": "products",
 	"templateUrl": "app/templates/products.html",
 	"controller": "productController",
-	"controllerAs": "products"
+	"controllerAs": "products",
+    "icon": "glyphicon glyphicon-chevron-cart"
 }
  ]

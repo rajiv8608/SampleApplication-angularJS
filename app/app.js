@@ -7,6 +7,7 @@
       mainController.$inject = ['$scope','$http','routerSetup', 'sharedService','$urlRouter'] 
       function mainController($scope,$http,routerSetup, sharedService,$urlRouter){
          var vm = this;
+          vm.showTransation = false;
            $scope.routesObject=[];
            $scope.routesObject = sharedService.getTotalRoutes();
            $scope.addNewState =function(newStateName){
@@ -24,6 +25,12 @@
         
                 $urlRouter.sync();
                 $urlRouter.listen();
+          
+          vm.toggleNavigation =function(){
+               vm.showTransation = !vm.showTransation ;
+            
+          }
+          
         
       }
       angular.module('myApp').config(function ($qProvider,

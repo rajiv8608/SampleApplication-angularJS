@@ -10,3 +10,30 @@
     display: block;
     width: 30%;
 }
+
+.navigation{
+    border :1px solid red;
+    width:200px;
+    height: 500px;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+}
+.navDiv{
+    height: 40px;
+    color: white;
+    background-color: red;
+    font-size: 14px;
+    padding: 10px;
+    
+}
+
+.showNav{
+     transform: translateX(-180px);
+     transition-duration: 0.5s;
+     transition-timing-function: linear;
+   
+     
+}
+.glyphicon{
+    margin-left: 90px;
+}

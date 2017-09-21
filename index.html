@@ -27,11 +27,17 @@
         <div class="container-fluid">
         <div class="row">
             <div class="col-md-2">
-                <div ng-repeat="item in routesObject">
-                    <!--<li  ui-sref="{{item.name}}"><a href="#">{{item.name}}</a></li>-->                    
-                    <uib-tabset active="activePill" vertical="true" type="pills" style="margin-bottom: 1px;">
-                        <uib-tab index="0" ui-sref="{{item.name}}" heading="{{item.name}}" ></uib-tab>   
-                    </uib-tabset>   
+                <div class="navigation" ng-class="{showNav:main.showTransation}" >
+                    <div class="navDiv" ng-click="main.toggleNavigation()" >Navigation
+                     <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-right': main.showTransation , 'glyphicon-chevron-left': !main.showTransation}"></i> 
+                    </div>
+                    <div ng-repeat="item in routesObject">
+                    
+                        <!--<li  ui-sref="{{item.name}}"><a href="#">{{item.name}}</a></li>-->                    
+                        <uib-tabset active="activePill" vertical="true" type="pills" style="margin-bottom: 1px;">
+                            <uib-tab index="0" ui-sref="{{item.name}}" heading="{{item.name}}"></uib-tab>  
+                        </uib-tabset>   
+                    </div>
                 </div>
             </div>
             <div class="col-md-10">
