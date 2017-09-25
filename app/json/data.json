@@ -5,7 +5,7 @@
 	"templateUrl": "app/templates/home.html",
 	"controller": "homeController",
 	"controllerAs": "home",
-    "icon": "glyphicon glyphicon-chevron-home"
+    "icon": "home"
 }, {
 	"name": "register",
 	"url": "/register",
@@ -13,7 +13,7 @@
 	"templateUrl": "app/templates/register.html",
 	"controller": "registerController",
 	"controllerAs": "register",
-    "icon": "glyphicon glyphicon-chevron-user"
+    "icon": "user"
 }, {
 	"name": "login",
 	"url": "/login",
@@ -21,7 +21,7 @@
 	"templateUrl": "app/templates/login.html",
 	"controller": "loginController",
 	"controllerAs": "login",
-    "icon": "glyphicon glyphicon-chevron-lock"
+    "icon": "lock"
 },{
 	"name": "products",
 	"url": "/products",
@@ -29,6 +29,6 @@
 	"templateUrl": "app/templates/products.html",
 	"controller": "productController",
 	"controllerAs": "products",
-    "icon": "glyphicon glyphicon-chevron-cart"
+    "icon": "cart"
 }
  ]

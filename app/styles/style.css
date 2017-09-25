@@ -12,7 +12,7 @@
 }
 
 .navigation{
-    border :1px solid red;
+    border :1px solid white;
     width:200px;
     height: 500px;
     transition-duration: 0.5s;
@@ -28,7 +28,7 @@
 }
 
 .showNav{
-     transform: translateX(-180px);
+     transform: translateX(-160px);
      transition-duration: 0.5s;
      transition-timing-function: linear;
    
@@ -36,4 +36,10 @@
 }
 .glyphicon{
     margin-left: 90px;
+}
+.container-fluid{
+    padding-left: 0px;
+}
+.nav-pills > li > a {
+     border-radius:0;
 }

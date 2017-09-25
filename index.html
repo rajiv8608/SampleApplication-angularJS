@@ -18,49 +18,47 @@
         <script src="lib/fabric.min.js"></script>
     </head> 
     <body ng-controller='mainController as main'>
-         
-           <!-- <div ng-include="'app/templates/navBar.html'"></div>-->
+
+        <!-- <div ng-include="'app/templates/navBar.html'"></div>-->
         <div navbar-directive></div>
         <input type="text" ng-model="stateName" >
         <button class="btn btn-primary" ng-click="addNewState(stateName)">add</button>
-      
+
         <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-2">
-                <div class="navigation" ng-class="{showNav:main.showTransation}" >
-                    <div class="navDiv" ng-click="main.toggleNavigation()" >Navigation
-                     <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-right': main.showTransation , 'glyphicon-chevron-left': !main.showTransation}"></i> 
-                    </div>
-                    <div ng-repeat="item in routesObject">
-                    
-                        <!--<li  ui-sref="{{item.name}}"><a href="#">{{item.name}}</a></li>-->                    
-                        <uib-tabset active="activePill" vertical="true" type="pills" style="margin-bottom: 1px;">
-                            <uib-tab index="0" ui-sref="{{item.name}}" heading="{{item.name}}"></uib-tab>  
-                        </uib-tabset>   
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="navigation" ng-class="{showNav:main.showTransation}" >
+                        <div class="navDiv" ng-click="main.toggleNavigation()" >Navigation
+                            <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-right': main.showTransation , 'glyphicon-chevron-left': !main.showTransation}"></i> 
+                        </div>
+                        <div ng-repeat="item in routesObject">                            
+                            <uib-tabset active="activePill" vertical="true" type="pills" style="margin-bottom: 1px;">
+                                <uib-tab index="0" ui-sref="{{item.name}}" heading="{{item.name}}"></uib-tab>  
+                            </uib-tabset>   
+                        </div>
                     </div>
                 </div>
+
+                <div class="col-md-10">
+                    <div ui-view></div>
+                </div>
             </div>
-            <div class="col-md-10">
-                 <div ui-view></div>
-            </div>
-        </div>
         </div>
 
-            
-       
-             <!--  <navbar-directive></navbar-directive>
-                <div class="navbar-directive"></div>-->
-       
+
+
+        <!--  <navbar-directive></navbar-directive>
+<div class="navbar-directive"></div>-->
+
         <script src="app/app.js"></script>
-         <script src="app/services/shared.service.js"></script>
+        <script src="app/services/shared.service.js"></script>
         <script src="app/contollers/login.js"></script>
         <script src="app/contollers/register.js"></script>
         <script src="app/contollers/home.js"></script>
-         <script src="app/contollers/products.js"></script>
+        <script src="app/contollers/products.js"></script>
         <script src="app/directives/register.directive.js"></script>
         <script src="app/contollers/defaultcontoller.js"></script>
         <script src="app/directives/navBar.directive.js"></script>
-       
         <script src="app/providers/router.provider.js"></script>
     </body>
 </html>
